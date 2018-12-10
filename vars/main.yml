@@ -33,12 +33,10 @@ install_files:
     dest:               '/usr/local/lib/agent_modules/rsync_timestamp'
 authorized_keys:
   - user:               'rachel-phone'
-    keyfile:            "{{ role_path }}/../rachel-phone/files/ssh_keys/rsync_backup.dss_key.pub"
+    keyfile:            "{{ role_path }}/../../inventory/hosts/rachel-phone/users/rsync_backup/files/ssh_keys/dss_key.pub"
   - user:               'aaron-phone'
-    keyfile:            "{{ role_path }}/../aaron-phone/files/ssh_keys/id_rsa.pub"
+    keyfile:            "{{ role_path }}/../../inventory/hosts/aaron-phone/users/aaron/files/ssh_keys/id_rsa.pub"
   - user:               'aaron-phone'
-    keyfile:            "{{ role_path }}/../aaron-phone/files/ssh_keys/rsync_backup.dss_key.pub"
+    keyfile:            "{{ role_path }}/../../inventory/hosts/aaron-phone/users/rsync_backup/files/ssh_keys/dss_key.pub"
   - user:               'aaron-phone'
-    keyfile:            "{{ role_path }}/../aaron-phone/files/ssh_keys/id_rsa.pub"
-  - user:               'aaron-phone'
-    keyfile:            "{{ role_path }}/../neuron/files/ssh_keys/root.id_rsa.pub"
+    keyfile:            "{{ role_path }}/../../inventory/hosts/neuron/users/root/files/ssh_keys/id_rsa.pub"
