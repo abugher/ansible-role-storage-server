@@ -2,3 +2,5 @@
 dependencies:
   - role:       'encrypted_storage'
     when:       skipdeps is not defined
+  - role:       'monitored'
+    when:       skipdeps is not defined
