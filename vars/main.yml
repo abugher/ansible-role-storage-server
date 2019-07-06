@@ -19,6 +19,30 @@ create_files:
     group:              'aaron-phone'
     mode:               '0750'
     state:              'directory'
+    path:               '/storage/aaron-phone/'
+create_files:
+  - owner:              'aaron-phone'
+    group:              'aaron-phone'
+    mode:               '0750'
+    state:              'directory'
+    path:               '/storage/aaron-phone/live/'
+create_files:
+  - owner:              'aaron-phone'
+    group:              'aaron-phone'
+    mode:               '0750'
+    state:              'directory'
+    path:               '/storage/aaron-phone/live/legacy'
+create_files:
+  - owner:              'aaron-phone'
+    group:              'aaron-phone'
+    mode:               '0750'
+    state:              'directory'
+    path:               '/storage/aaron-phone/live/legacy/DCIM'
+create_files:
+  - owner:              'aaron-phone'
+    group:              'aaron-phone'
+    mode:               '0750'
+    state:              'directory'
     path:               '/storage/aaron-phone/live/legacy/DCIM/Camera'
 install_files:
   - owner:              'root'
