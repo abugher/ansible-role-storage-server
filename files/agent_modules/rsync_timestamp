@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Naughty.  This should be templated and fed from inventory.
-fingerprint='07:7d:59:5e:cd:73:e6:66:f7:a5:d8:0a:a6:a3:0b:c4'
+# ssh-keygen -lf inventory/hosts/aaron-phone/users/aaron/files/ssh_keys/id_rsa.pub | awk '{print $2}'
+fingerprint='SHA256:RuC+F9r+4SJ5HoqnDzFGmjl3Q+7IlQFopmsvZErbsy0'
 search_string="ssh2: RSA ${fingerprint}"
 ssh_log_files=( 
   '/var/log/auth.log.4' 
