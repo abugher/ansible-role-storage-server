@@ -20,25 +20,21 @@ create_files:
     mode:               '0750'
     state:              'directory'
     path:               '/storage/aaron-phone/'
-create_files:
   - owner:              'aaron-phone'
     group:              'aaron-phone'
     mode:               '0750'
     state:              'directory'
     path:               '/storage/aaron-phone/live/'
-create_files:
   - owner:              'aaron-phone'
     group:              'aaron-phone'
     mode:               '0750'
     state:              'directory'
     path:               '/storage/aaron-phone/live/legacy'
-create_files:
   - owner:              'aaron-phone'
     group:              'aaron-phone'
     mode:               '0750'
     state:              'directory'
     path:               '/storage/aaron-phone/live/legacy/DCIM'
-create_files:
   - owner:              'aaron-phone'
     group:              'aaron-phone'
     mode:               '0750'
@@ -60,8 +56,6 @@ authorized_keys:
     keyfile:            "{{ role_path }}/../../inventory/hosts/rachel-phone/users/rsync_backup/files/ssh_keys/dss_key.pub"
   - user:               'aaron-phone'
     keyfile:            "{{ role_path }}/../../inventory/hosts/aaron-phone/users/aaron/files/ssh_keys/id_rsa.pub"
-  - user:               'aaron-phone'
-    keyfile:            "{{ role_path }}/../../inventory/hosts/aaron-phone/users/rsync_backup/files/ssh_keys/dss_key.pub"
   - user:               'aaron-phone'
     keyfile:            "{{ role_path }}/../../inventory/hosts/neuron/users/root/files/ssh_keys/id_rsa.pub"
 allow_users:
