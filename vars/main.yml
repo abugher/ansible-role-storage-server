@@ -1,13 +1,4 @@
 ---
-filesystems:
-  - dev:                '/dev/mapper/storage'
-    fstype:             'ext4'
-mount:
-  - name:               '/storage'
-    fstype:             'ext4'
-    opts:               'noatime,noauto,nodev,nosuid,noexec'
-    src:                '/dev/mapper/storage'
-    state:              'mounted'
 user_groups:
   - 'rachel-phone'
   - 'aaron-phone'
@@ -19,22 +10,22 @@ create_files:
     group:              'aaron-phone'
     mode:               '0750'
     state:              'directory'
-    path:               '/storage/aaron-phone/'
+    path:               "{{ encrypted_storage[0]['mount_point'] }}/aaron-phone/"
   - owner:              'aaron-phone'
     group:              'aaron-phone'
     mode:               '0750'
     state:              'directory'
-    path:               '/storage/aaron-phone/sdcard'
+    path:               "{{ encrypted_storage[0]['mount_point'] }}/aaron-phone/sdcard"
   - owner:              'aaron-phone'
     group:              'aaron-phone'
     mode:               '0750'
     state:              'directory'
-    path:               '/storage/aaron-phone/sdcard/DCIM'
+    path:               "{{ encrypted_storage[0]['mount_point'] }}/aaron-phone/sdcard/DCIM"
   - owner:              'aaron-phone'
     group:              'aaron-phone'
     mode:               '0750'
     state:              'directory'
-    path:               '/storage/aaron-phone/sdcard/DCIM/Camera'
+    path:               "{{ encrypted_storage[0]['mount_point'] }}/aaron-phone/sdcard/DCIM/Camera"
 install_files:
   - owner:              'root'
     group:              'root'
