@@ -4,20 +4,15 @@
 # ssh-keygen -lf inventory/hosts/aaron-phone/users/aaron/files/ssh_keys/id_rsa.pub | awk '{print $2}'
 fingerprint='SHA256:RuC+F9r+4SJ5HoqnDzFGmjl3Q+7IlQFopmsvZErbsy0'
 search_string="ssh2: RSA ${fingerprint}"
-ssh_log_files=( 
-  '/var/log/auth.log.4' 
-  '/var/log/auth.log.3' 
-  '/var/log/auth.log.2' 
-  '/var/log/auth.log.1' 
-  '/var/log/auth.log'
-)
+
+ssh_log_files=( $(
+  ls -r /var/log/auth.log*
+) )
 
 line="$(
   for f in "${ssh_log_files[@]}"; do
-    zcat "${f}.gz" \
-    || cat "${f}"
+    zgrep "${search_string}" "${f}"
   done \
-    | grep "${search_string}" \
     | tail -n 1
 )"
 
