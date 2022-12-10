@@ -11,7 +11,7 @@ ssh_log_files=( $(
 
 line="$(
   for f in "${ssh_log_files[@]}"; do
-    zgrep "${search_string}" "${f}"
+    zgrep --text "${search_string}" "${f}"
   done \
     | tail -n 1
 )"
