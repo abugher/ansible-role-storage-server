@@ -1,7 +1,4 @@
 ---
-dependencies:
-  - 'encrypted-storage'
-  - 'monitored'
 user_groups:
   - 'rachel-phone'
   - 'aaron-phone'
