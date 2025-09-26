@@ -2,9 +2,11 @@
 user_groups:
   - 'rachel-phone'
   - 'aaron-phone'
+  - 'exploris-recordings'
 users:
   - 'rachel-phone'
   - 'aaron-phone'
+  - 'exploris-recordings'
 create_files:
   - owner:              'aaron-phone'
     group:              'aaron-phone'
@@ -36,6 +38,11 @@ create_files:
     mode:               '0644'
     state:              'touch'
     path:               '/var/log/rsync_data.last_success'
+  - owner:              'exploris-recordings'
+    group:              'exploris-recordings'
+    mode:               '0755'
+    state:              'directory'
+    path:               "{{ encrypted_storage[0]['mount_point'] }}/exploris-recordings"
 install_files:
   - owner:              'root'
     group:              'root'
@@ -49,6 +56,9 @@ authorized_keys:
     keyfile:            "{{ role_path }}/../../inventory/hosts/aaron-phone/users/aaron/files/ssh_keys/id_rsa.pub"
   - user:               'aaron-phone'
     keyfile:            "{{ role_path }}/../../inventory/hosts/neuron/users/root/files/ssh_keys/id_rsa.pub"
+  - user:               'exploris-recordings'
+    keyfile:            "{{ role_path }}/../../inventory/hosts/obsidian/users/aaron/files/ssh_keys/id_rsa.pub"
 allow_users:
   - 'rachel-phone'
   - 'aaron-phone'
+  - 'exploris-recordings'
