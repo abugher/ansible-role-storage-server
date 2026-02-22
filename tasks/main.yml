@@ -1,7 +1,7 @@
 ---
-- include_tasks:        '../tasks/user_groups.yml'
-- include_tasks:        '../tasks/users.yml'
-- include_tasks:        '../tasks/create_files.yml'
-- include_tasks:        '../tasks/install_files.yml'
-- include_tasks:        '../tasks/authorized_keys.yml'
-- include_tasks:        '../tasks/allow_users.yml'
+- include_tasks:        'tasks/common/user_groups.yml'
+- include_tasks:        'tasks/common/users.yml'
+- include_tasks:        'tasks/common/create_files.yml'
+- include_tasks:        'tasks/common/install_files.yml'
+- include_tasks:        'tasks/common/authorized_keys.yml'
+- include_tasks:        'tasks/common/allow_users.yml'

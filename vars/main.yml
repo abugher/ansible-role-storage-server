@@ -51,13 +51,13 @@ install_files:
     dest:               '/etc/cron.d/chown_pictures'
 authorized_keys:
   - user:               'rachel-phone'
-    keyfile:            "{{ role_path }}/../../inventory/hosts/rachel-phone/users/rsync_backup/files/ssh_keys/dss_key.pub"
+    keyfile:            "inventory/hosts/rachel-phone/users/rsync_backup/files/ssh_keys/dss_key.pub"
   - user:               'aaron-phone'
-    keyfile:            "{{ role_path }}/../../inventory/hosts/aaron-phone/users/aaron/files/ssh_keys/id_rsa.pub"
+    keyfile:            "inventory/hosts/aaron-phone/users/aaron/files/ssh_keys/id_rsa.pub"
   - user:               'aaron-phone'
-    keyfile:            "{{ role_path }}/../../inventory/hosts/neuron/users/root/files/ssh_keys/id_rsa.pub"
+    keyfile:            "inventory/hosts/neuron/users/root/files/ssh_keys/id_rsa.pub"
   - user:               'exploris-recordings'
-    keyfile:            "{{ role_path }}/../../inventory/hosts/obsidian/users/aaron/files/ssh_keys/id_rsa.pub"
+    keyfile:            "inventory/hosts/obsidian/users/aaron/files/ssh_keys/id_rsa.pub"
 allow_users:
   - 'rachel-phone'
   - 'aaron-phone'
